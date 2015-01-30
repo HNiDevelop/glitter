@@ -1,0 +1,77 @@
+{
+	"pageContent": {
+		"start": {
+			"partial": "moduleLogo",
+			"content": {
+				"pageTitle": "Haters gonna hate",
+				"pageSubTitle": "They hate you, coz they ain't you!",
+				"buttonText": "... and slap the glitter out of your haters asses!"				
+			}
+		},
+		"formular": {
+			"partial": "moduleForm",
+			"content": {
+				"formularAnonym": "Keep my anonymous",
+				"formularLabels": {
+					"yourName": "Your Name",
+					"hatersName": "Haters Name",
+					"hatersStreet": "Haters Street",
+					"hatersCity": "Haters City",
+					"hatersZip": "Haters ZIP Code",
+					"hatersCountry": "Haters Country"
+				},
+				"formularText": {
+					"yourMsg": "Your Message"
+				},
+				"formularCode": {
+					"code": "Insert Code"
+				}
+			}
+		},
+		"checkout": { 
+			"partial": "moduleCheckout",
+			"title": "Well done...",
+			"text": "... deine Bestellung wurde an uns übermittelt. <br>Bitte bezahle nun über den PayPal-Button."
+		},
+		"how-it-works": {
+			"inNavi": true,
+			"scheme": "bg-light",
+			"partial": "moduleDescription",
+			"title": "How it works",
+			"text": "Bacon ipsum dolor amet tri-tip turkey meatball swine landjaeger beef ribs cupim jowl pork belly jerky filet mignon bacon pig turducken prosciutto. Biltong prosciutto beef meatloaf pork pork loin ground round drumstick bacon tenderloin chicken cow ribeye tongue. Salami alcatra t-bone swine strip steak kielbasa. Hamburger porchetta salami frankfurter pastrami, biltong turducken turkey pancetta. Hamburger pork belly turkey meatball jerky strip steak pancetta filet mignon porchetta ham hock sausage. Chuck kevin shank, pastrami prosciutto meatloaf tri-tip pork chop."
+		},
+		"faq": {			
+			"inNavi": true,
+			"partial": "moduleFaq",
+			"title": "FAQ",
+			"items": [
+				{
+					"q": "WAS?",
+					"a": "DARUM"
+				},
+				{
+					"q": "WIE?",
+					"a": "DANN"
+				}
+			]
+		}, 
+		"compliments": {
+			"inNavi": false,
+			"partial": "moduleText",			
+			"title": "Compliments"
+		},
+		"contact-us": {
+			"inNavi": true,	
+			"partial": "moduleText",
+			"title": "Contact us",
+			"text": "<a href='mailto:glitter@glitter.com'>glitter@glitter.com</a>"
+		}
+	},
+	"pageInfo": {
+		"imprint": {
+			"title": "Impressum",
+			"href": "impressum.html"
+		},
+		"copyright": "2015 &copy; [GLITTER]"
+	}
+}

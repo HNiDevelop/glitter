@@ -1,0 +1,10 @@
+{
+    "jsModuleFiles": [
+        "javascripts/modules/pageController.js"   
+    ],
+    "jsMainFile": "javascripts/main.js",
+    "cssFiles": [
+        "stylesheets/reset.css",
+        "stylesheets/modules.css"
+    ]
+}

@@ -1,0 +1,29 @@
+<div class="row">
+	<div class="error">Fehler: <span class="error-message"></span></div>
+</div>
+
+<div class="form-wrapper">
+	<form name="form-order" method="post" action="../../../sendData.php">
+		<input type="hidden" name="checkCode" value="">
+		<div class="field type-check">
+			<label><input type="checkbox" name="formularAnonym" value="1">{{{content.formularAnonym}}}</label>
+		</div>
+
+		{{#each content.formularLabels}}
+			<div class="field type-text">
+				<input type="text" name="{{@key}}" placeholder="{{this}}">
+			</div>
+		{{/each}}
+
+		<div class="field type-area">
+			<textarea name="yourMsg" placeholder="{{content.formularText.yourMsg}}"></textarea>
+		</div>
+
+		<div class="field-wrapper">
+			<div class="type-code">Code: <span id="code">0000</span></div>
+			<div class="field type-valid">
+				<input type="text" name="formularCode" placeholder="{{content.formularCode.code}}">
+			</div>
+		</div>
+	</form>
+</div>

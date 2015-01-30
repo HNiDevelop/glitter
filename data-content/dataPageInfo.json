@@ -1,0 +1,12 @@
+{
+    "de": {
+        "ogImagePath": "images/og-image.jpg",
+        "faviconPath": "images/favicon.ico",
+        "language": "de"
+    },
+    "en": {
+        "ogImagePath": "images/og-image.jpg",
+        "faviconPath": "images/favicon.ico",
+        "language": "en"
+    }
+}

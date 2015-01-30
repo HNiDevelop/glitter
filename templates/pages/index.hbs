@@ -1,0 +1,76 @@
+---
+indexNavTitle: "Indexseite"
+type: content
+c: <%= dataContent.de %>
+p: <%= dataPageInfo.de %>
+---    
+    <div class="container">
+        <div class="col12-1">
+
+            <h1 class="page-header">
+                Übersicht
+            </h1>
+            <p class="lead">
+                Auflistung aller Templates, Module und Plugins welche für dieses Projekt verwendet werden.
+            </p>
+            
+            <h3>Inhaltsseiten <small>Auflistung aller Seitentemplates</small></h3>
+            <div class="bs-example">
+                <ul> 
+                {{#each pages }} 
+                    
+                    {{#unless isCurrentPage }}
+                    {{#is data.type "content"}}
+                    <li>
+                        <a href ="{{ relativeLink }}">
+                            {{ data.indexNavTitle }} ({{ dest }})
+                        </a>
+                    </li> 
+                    {{/is}}
+                    {{/unless }}
+
+                {{/each }} 
+                </ul>
+            </div>
+
+
+            <h3>Module <small>Projektspezifische Module</small></h3>
+            <div class="bs-example">
+                <ul> 
+                {{#each pages }} 
+                    
+                    {{#unless isCurrentPage }}
+                    {{#is data.type "module"}}
+                    <li>
+                        <a href ="{{ relativeLink }}">
+                            {{ data.indexNavTitle }} ({{ dest }})
+                        </a>
+                    </li> 
+                    {{/is}}
+                    {{/unless }}
+
+                {{/each }} 
+                </ul>
+            </div>
+
+        
+            <h3>z+o Plugins <small>Übersicht der bestehenden Plugins</small></h3>
+            <div class="bs-example">
+                <ul> 
+                {{#each pages }} 
+                    
+                    {{#unless isCurrentPage }}
+                    {{#is data.type "zo-plugin"}}
+                    <li>
+                        <a href ="{{ relativeLink }}">
+                            {{ data.indexNavTitle }} ({{ dest }})
+                        </a>
+                    </li> 
+                    {{/is}}
+                    {{/unless }}
+
+                {{/each }} 
+                </ul>
+            </div>
+        </div>
+    </div>

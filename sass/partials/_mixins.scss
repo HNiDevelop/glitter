@@ -1,0 +1,193 @@
+@mixin relative-font-size($size, $base-font: $base-font-size) {
+    font-size: $size / $base-font * 1em;
+
+    @include context($size, $base-font) {
+        @content;
+    }
+}
+
+@mixin rfs($size, $base-font: $base-font-size) {
+    @include relative-font-size($size, $base-font) {
+        @content
+    }
+}
+
+@mixin relative-line-height($size, $base-font: $base-font-size) {
+    line-height: $size / $base-font * 1em;
+
+    @include context($size, $base-font) {
+        @content;
+    }
+}
+
+@mixin rlh($size, $base-font: $base-font-size) {
+    @include relative-line-height($size, $base-font) {
+        @content
+    }
+}
+
+@mixin context($size, $base-font: $base-font-size) {
+    $temp-base-font-size: $base-font-size;
+    $base-font-size: $size;
+    @content;
+    $base-font-size: $temp-base-font-size;
+}
+
+@mixin relative-font($font-size, $line-height, $base-font: $base-font-size) {
+    font-size: $font-size / $base-font * 1em;
+    line-height: $line-height / $font-size * 1em;
+
+    @include context($font-size, $base-font) {
+        @content;
+    }
+}
+
+@mixin rf($font-size, $line-height, $base-font: $base-font-size) {
+    @include relative-font($font-size, $line-height, $base-font) {
+        @content
+    }
+}
+
+@function relative-unit($size, $base-size: $base-font-size) {
+    @return $size / $base-size * 1em;
+}
+
+@function ru($size, $base-size: $base-font-size) {
+    @return relative-unit($size, $base-size);
+}
+
+@mixin grid-clearfix(){
+    width: 100%;
+    clear: both;
+}
+
+@mixin breakpoint($query-max-width){
+    @media (max-width: $query-max-width) { 
+        @content
+    }
+}
+
+@mixin breakpoint-min($query-min-width){
+    @media (min-width: $query-min-width) { 
+        @content
+    }
+}
+
+@mixin arrow($direction, $color, $width: 24, $height: 15) {
+    width: 0;
+    height: 0;
+
+    @if $direction == top {
+        border-left: ru($height) inset transparent;
+        border-right: ru($height) inset transparent;
+        border-bottom: ru($width) solid $color;
+        border-top: none;
+    } @else if $direction == right {
+        border-top: ru($height) inset transparent;
+        border-bottom: ru($height) inset transparent;
+        border-left: ru($width) solid $color;
+        border-right: none;
+    } @else if $direction == bottom {
+        border-left: ru($height) inset transparent;
+        border-right: ru($height) inset transparent;
+        border-top: ru($width) solid $color;
+        border-bottom: none;
+    } @else if $direction == left {
+        border-top: ru($height) inset transparent;
+        border-bottom: ru($height) inset transparent;
+        border-right: ru($width) solid $color;
+        border-left: none;
+    } @else {
+        @warn "No valid direction provided. Please provide either top, right, bottom or left";
+    }
+}
+
+@mixin play-button(){
+
+    // default size
+    $lineHeight: 91;
+    $width: 90;
+    $height: 90;
+    $font-size: 70;
+
+    font-size: ru($font-size);
+    width: ru($width, $font-size);
+    height: ru($height, $font-size);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: ru(-($height / 2), $font-size);
+    margin-left: ru(-($width / 2), $font-size);
+
+    background-color: #000000;
+    background-color: rgba(74, 74, 74, .7);
+
+    @include border-radius(50%);
+
+    &:before {
+        content: '\e600';
+        font-family: Icons;
+        color: #fff;
+        display: block;
+        line-height: ru($lineHeight, $font-size);
+        width: ru(104, $font-size);
+        height: ru(104, $font-size);
+        overflow: hidden;
+        text-align: center;
+        z-index: 100;
+        @include border-radius(50%);
+        border-color: #ffffff;
+        border: ru(8, $font-size) solid rgba(255, 255, 255, .8);
+        margin-top: ru(-8, $font-size);
+        margin-left: ru(-8, $font-size);
+        @include box-sizing(border-box);
+        padding-left: ru(12, $font-size);
+    }
+}
+
+/*********************************
+  project specific mixins 
+ *********************************/
+@mixin module-spacer() {
+    margin-top: ru(93);
+    margin-bottom: ru(68);
+}
+
+@mixin element-headlines() {
+    margin-bottom: ru(23);
+}
+
+@mixin element-quote-text($fontSize, $lineHeight) {
+    font-family: $font-family-quote;
+    font-size: ru($fontSize);
+    font-style: italic;
+    line-height: ru($lineHeight, $fontSize);
+}
+
+@mixin element-shadow-after {
+    content: '';
+    background-image: image-url('shadow-large.png');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    bottom: 0;
+
+    display: block;
+    width: 100%;
+    height: 10px;
+}
+
+@mixin navi-link-active {
+    position: absolute;
+    display: block;
+    content: '';
+    bottom: 0;
+    border-bottom: 4px solid $color-ci-yellow;
+    width: 100%;
+    padding: 0px 13px;
+    left: -13px;
+    display: block;
+    @include box-sizing(content-box);
+}

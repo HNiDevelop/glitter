@@ -1,0 +1,15 @@
+---
+c: <%= dataContent.de %>
+p: <%= dataPageInfo.de %>
+type: content
+path: ../../../
+pageContent: <%= dataPageIndex %>
+---
+
+<div class="content">
+    {{#each pageContent.pageContent}}
+    	<div class="section {{scheme}}" id="{{@key}}">
+    	{{renderPartial partial this}}
+    	</div>
+    {{/each}} 
+</div>

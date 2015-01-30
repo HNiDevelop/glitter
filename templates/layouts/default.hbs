@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="{{ p.language }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="description" content="{{ p.metadescription }}" />
+    <meta property="og:image" content="{{path}}{{ p.ogImagePath }}" />
+
+    <title>{{ pageContent.pageName }}</title>
+    <link rel="shortcut icon" href="{{path}}{{ p.faviconPath }}" type="image/x-icon" />
+
+    <script>
+        var _globalPath = "./{{ path }}";
+    </script>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+    <!-- CSS / JS Include -->
+    {{> headerIncludes }}
+
+</head>
+<body class="{{language}}">
+    <div class="page">
+
+        {{> header}}
+        
+        {{> body}}
+
+        {{> footer}}
+
+    </div>
+</body>
+</html>

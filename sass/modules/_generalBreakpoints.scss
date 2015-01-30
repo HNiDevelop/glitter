@@ -1,0 +1,69 @@
+/**************************
+ * BREAKPOINTS
+ **************************/
+@include breakpoint(ru(1024)) { 
+	.page {
+		width: 90%;
+	}
+
+	#how-it-works {
+		.content {
+			width: 70%;
+		}
+	}
+
+	#checkout {
+		.wrapper {
+			width: 95%;
+		}
+	}
+}
+
+@include breakpoint(ru(400)) { 
+	#start {
+		#buy img {
+			width: 100%;
+		}
+	}
+
+	#formular {
+		.form-wrapper {
+			width: 100%;
+		}
+
+		.field {
+			width: 95%;
+			margin: 0 auto;
+			margin-bottom: ru(10);
+		}
+		.field-wrapper {
+			width: 95%;
+			margin: 0 auto;
+
+			.type-code {
+				width: 40%;
+			}
+			.type-valid {
+				width: 60%;
+			}
+		}
+	}
+
+	#checkout {
+		.wrapper {
+			padding: ru(10);
+
+			h4 {
+				font-size: ru(22);
+			}
+
+			.text {
+				font-size: ru(18);
+			}
+
+			.button {
+				margin: ru(20) auto;
+			}
+		}
+	}
+}

@@ -1,0 +1,127 @@
+{
+    "de": {
+        "pageLinks": {
+            "impressum": {
+                "title": "Impressum",
+                "href": "impressum.html"
+            }
+        },
+        "pageHeaderNavi": {
+            "kontakt": {
+                "title": "Kontakt",
+                "href": "kontakt.html",
+                "icon": "icon-circle-arrow-R"
+            },
+            "karriere": {
+                "title": "Karriere",
+                "href": "karriere.html",
+                "icon": "icon-circle-arrow-R"
+            },
+            "sprache": {
+                "title": "Englisch",
+                "href": "../en",
+                "icon": "icon-circle-arrow-R"
+            }
+        },
+        "pageNavi": [
+            {
+                "title": "Unternehmen",
+                "pageId": "unternehmen",
+                "children": [
+                    {
+                        "title": "Unsere Arbeitsweise",
+                        "pageAnchor": "#unsere_arbeitsweise"
+                    },
+                    {
+                        "title": "Unsere Kunden",
+                        "pageAnchor": "#unsere_kunden"
+                    },
+                    {
+                        "title": "Facts & Figures",
+                        "pageAnchor": "#facts_figures"
+                    }
+                ]
+            },
+            {
+                "title": "Leistungen",
+                "pageId": "leistungen",
+                "children": [
+                    {
+                        "title": "Mergers & Acquisitions",
+                        "pageAnchor": "#mergers_acquisitions"
+                    },
+                    {
+                        "title": "Unternehmensfinanzierung",
+                        "pageAnchor": "#unternehmensfinanzierung"
+                    },
+                    {
+                        "title": "Flankierende Lösungen",
+                        "pageAnchor": "#flankierende_loesungen"
+                    }
+                ]
+            },
+            {
+                "title": "Team",
+                "pageId": "team",
+                "children": [
+                    {
+                        "title": "Vorstand & Aufsichtsrat",
+                        "pageAnchor": "#vorstand_aufsichtsrat"
+                    },
+                    {
+                        "title": "Mitarbeiter",
+                        "pageAnchor": "#mitarbeiter"
+                    },
+                    {
+                        "title": "Industrieexperten",
+                        "pageAnchor": "#industrieexperten"
+                    },
+                    {
+                        "title": "Internationale Partner",
+                        "pageAnchor": "#internationale_partner"
+                    }
+                ]
+            },
+            {
+                "title": "Branchen",
+                "pageId": "branchen"
+            },
+            {
+                "title": "Referenzen",
+                "pageId": "referenzen"
+            },
+            {
+                "title": "Publikationen",
+                "pageId": "publikationen",
+                "children": [
+                    {
+                        "title": "Fachartikel",
+                        "pageAnchor": "#fachartikel"
+                    },
+                    {
+                        "title": "Bücher",
+                        "pageAnchor": "#buecher"
+                    },
+                    {
+                        "title": "Branchenberichte",
+                        "pageAnchor": "#branchenberichte"
+                    }
+                ]
+            },
+            {
+                "title": "Standorte",
+                "pageId": "standorte",
+                "children": [
+                    {
+                        "title": "Standorte",
+                        "pageAnchor": "#standorte"
+                    },
+                    {
+                        "title": "Team",
+                        "pageAnchor": "#team"
+                    }
+                ]
+            }            
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+    <!-- Stylesheets -->
+    <!-- build:css {{ path }}stylesheets/main.min.css -->
+    {{#each srcConfig.cssFiles}}
+    <link rel="stylesheet" href="{{ ../path }}{{ this }}">
+    {{/each}}
+    <!-- endbuild -->
+
+    
+    <!-- IE CSS / JS -->
+    <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="{{ path }}stylesheets/ie8.css">
+    <![endif]-->
+    <!--[if IE 8]>
+        <script src="{{ path }}javascripts/ie/respond.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="{{ path }}javascripts/ie/html5shiv.js"></script>
+    <![endif]-->    
+
+
+    <!-- JavaScripts -->    
+    <!-- build:js {{ path }}javascripts/main.min.js -->
+    {{#each srcConfig.jsLibrariesFiles}}
+    <script src="{{ ../path }}{{ this }}"></script>
+    {{/each}}
+    
+    {{#each srcConfig.jsModuleFiles}}
+    <script src="{{ ../path }}{{ this }}"></script>
+    {{/each}}
+    
+    <script src="{{ path }}{{ srcConfig.jsMainFile }}"></script>
+    <!-- endbuild -->

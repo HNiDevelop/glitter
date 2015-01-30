@@ -1,0 +1,18 @@
+<div class="header">
+	<div class="section language-switch">
+		<a class="language {{#ifCond 'en' '==' p.language }}active{{/ifCond}}" href="../en">EN</a> | 
+		<a class="language {{#ifCond 'de' '==' p.language }}active{{/ifCond}}" href="../de">DE</a>
+	</div>
+	<div class="section navigation bg-light">
+		{{!-- LINKS --}}
+		<ul>
+			{{#each pageContent.pageContent}}
+			{{#if inNavi}}
+			<li>
+				<a class="page-link" href="#{{@key}}">{{{title}}}</a>
+			</li>
+			{{/if}}
+			{{/each}}
+		</ul>
+	</div>
+</div>
